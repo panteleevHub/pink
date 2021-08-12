@@ -1,0 +1,19 @@
+.intro {
+  background-color: $very-dark-blue;
+  background-image: url("../img/back-intro-mobile.jpg");
+  background-repeat: no-repeat;
+}
+
+.intro__slogan {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 300;
+  color: $white;
+}
+
+.intro__caption {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 300;
+  color: $white;
+}

@@ -1,0 +1,70 @@
+.feedback__promo-text {
+  line-height: 30px;
+}
+
+.feedback__fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+.feedback__fieldset-title {
+  line-height: 18px;
+  color: $dark-pink;
+}
+
+.feedback__initials-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feedback__initials-label,
+.feedback__contacts-label {
+  line-height: 30px;
+  color: $dark-pink;
+  cursor: pointer;
+}
+
+.feedback__initials-input,
+.feedback__contacts-input {
+  font-size: 18px;
+  line-height: 30px;
+  color: $dark-blue;
+  padding: 0;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+.feedback__achievements,
+.feedback__apps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feedback__achievements-label,
+.feedback__apps-label {
+  font-size: 18px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.feedback__comment {
+  font-size: 18px;
+  line-height: 30px;
+  color: $dark-blue;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+.feedback__footnote {
+  line-height: 30px;
+
+  span {
+    color: $dark-pink;
+  }
+}

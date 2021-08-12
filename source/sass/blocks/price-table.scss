@@ -1,0 +1,24 @@
+.price-table__head {
+  color: $white;
+  background-color: $dark-blue;
+}
+
+.price-table__head-title {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.price-table__price {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.price-table__body {
+  background-color: $white;
+}
+
+.price-table__body td {
+  line-height: 30px;
+}

@@ -1,0 +1,21 @@
+.reviews__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reviews__name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $black;
+}
+
+.reviews__status {
+  display: none;
+  line-height: 30px;
+}
+
+.reviews__text {
+  line-height: 30px;
+}

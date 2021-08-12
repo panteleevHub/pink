@@ -27,11 +27,20 @@ const styles = () => {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+const normalize = () => {
+  return gulp.src("source/css/normalize.css")
+  .pipe(postcss([
+    csso()
+  ]))
+  .pipe(rename("normalize.min.css"))
+    .pipe(gulp.dest("source/css"))
+}
 
 // HTML
 
@@ -125,7 +134,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "build"
+      baseDir: "source"
     },
     cors: true,
     notify: false,
@@ -146,7 +155,7 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
@@ -157,12 +166,15 @@ exports.default = gulp.series(
 
 // Build
 
-const build = gulp.series(
+const build = gulp.series(styles, normalize);
+
+/*const build = gulp.series(
   clean,
   copy,
   optimizeImages,
   gulp.parallel(
     styles,
+    normalize,
     html,
     scripts,
     sprite,
@@ -170,17 +182,19 @@ const build = gulp.series(
   ),
 );
 
-exports.build = build;
+exports.build = build;*/
 
 // Default
 
+exports.default = gulp.series(styles, normalize, server, watcher);
 
-exports.default = gulp.series(
+/*exports.default = gulp.series(
   clean,
   copy,
   copyImages,
   gulp.parallel(
     styles,
+    normalize,
     html,
     scripts,
     sprite,
@@ -189,4 +203,4 @@ exports.default = gulp.series(
   gulp.series(
     server,
     watcher
-  ));
+  ));*/
