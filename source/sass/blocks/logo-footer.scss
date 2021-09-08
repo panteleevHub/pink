@@ -1,0 +1,29 @@
+.logo-footer {
+  display: block;
+  width: 145px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.logo-footer:hover path,
+.logo-footer:focus path {
+  fill: $dark-pink;
+}
+
+.logo-footer:active path {
+  opacity: 0.3;
+}
+
+.logo-footer__svg--mobile {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.logo-footer__svg--desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

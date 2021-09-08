@@ -1,0 +1,50 @@
+.logo-header {
+  width: 74px;
+  height: 23px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 145px;
+    height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 147px;
+  }
+}
+
+.logo-header:hover path,
+.logo-header:focus path {
+  fill: $dark-pink;
+}
+
+.logo-header:active path {
+  fill: $white;
+  opacity: 0.3;
+}
+
+.logo-header__svg--mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.logo-header__svg--tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.logo-header__svg--desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

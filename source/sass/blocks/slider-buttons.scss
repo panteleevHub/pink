@@ -1,0 +1,38 @@
+.slider-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 19px;
+  max-width: 180px;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.slider-buttons__item {
+  width: 6px;
+  height: 6px;
+  background-color: rgba($dark-blue, 0.3);
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slider-buttons__item--active {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  box-shadow: 0 0 0 3px $dark-blue;
+  cursor: auto;
+}
+
+.slider-buttons__item:not(.slider-buttons__item--active):hover,
+.slider-buttons__item:not(.slider-buttons__item--active):focus {
+  background-color: rgba($dark-blue, 0.6);
+}
+
+.slider-buttons__item:not(.slider-buttons__item--active):active {
+  background-color: rgba($dark-blue, 0.1);
+}

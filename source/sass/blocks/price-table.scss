@@ -1,24 +1,118 @@
-.price-table__head {
-  color: $white;
-  background-color: $dark-blue;
+.price-table {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 840px;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  @media (min-width: $tablet-width) {
+    width: 620px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 940px;
+  }
 }
 
-.price-table__head-title {
+.price-table__cell {
+  width: 280px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 155px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 235px;
+  }
+}
+
+.price-table__cell--empty {
+  display: none;
+}
+
+.price-table__cell--head {
+  position: relative;
+  color: $white;
+  background-color: $dark-blue;
+  padding: 10px;
+  padding-top: 12px;
+  padding-bottom: 26px;
+  text-align: center;
+  border-left: 2px solid $very-light-gray;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 17px;
+    padding-bottom: 20px;
+  }
+}
+
+.price-table__cell--head:first-child {
+  border-left: none;
+}
+
+.price-table__head-name {
+  display: block;
   font-size: 16px;
   line-height: 30px;
   font-weight: 700;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .price-table__price {
+  display: block;
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+  }
 }
 
-.price-table__body {
-  background-color: $white;
-}
-
-.price-table__body td {
+.price-table__cell--body {
   line-height: 30px;
+  padding: 15px 20px;
+  padding-top: 14px;
+  background-color: $white;
+  border: 2px solid $light-gray;
+
+  @media (min-width: $tablet-width) {
+    padding: 6px 15px;
+    padding-top: 8px;
+    text-transform: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    padding: 13px 20px;
+    padding-bottom: 15px;
+  }
+}
+
+.price-table__cell--body:not(.price-table__cell--body-caption) {
+  border-top: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 0;
+    line-height: 0;
+  }
+}
+
+.price-table__cell--body-caption {
+  @media (max-width: $mobile-only) {
+    display: none;
+  }
 }

@@ -1,7 +1,70 @@
 .intro {
-  background-color: $very-dark-blue;
-  background-image: url("../img/back-intro-mobile.jpg");
+  position: relative;
+  z-index: 1;
+  background: url("../img/intro-background-mobile.jpg") 50% 0;
   background-repeat: no-repeat;
+  background-size: 700px 462px;
+  background-color: $very-dark-blue;
+  padding-top: 90px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/intro-background-tablet.jpg");
+    background-size: 1200px 727px;
+    padding-top: 202px;
+    padding-bottom: 114px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/intro-background-desktop.jpg");
+    background-size: 2560px 853px;
+    padding-top: 210px;
+    padding-bottom: 125px;
+  }
+}
+
+.intro--inner {
+  min-height: 237px;
+  padding-top: 96px;
+  padding-bottom: 19px;
+}
+
+.intro--main::before {
+  content: "";
+  position: absolute;
+  top: 176px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  width: 320px;
+  height: 286px;
+  background:
+    url("../img/hand-with-phone-mobile.png"),
+    url("../img/screen-mobile.jpg") 50% 33px;
+  background-repeat: no-repeat;
+  background-size: 320px 286px, 111px 197px;
+
+  @media (min-width: $tablet-width) {
+    top: 183px;
+    width: 660px;
+    height: 545px;
+    background:
+      url("../img/hand-with-phone-tablet.png"),
+      url("../img/screen-tablet.jpg") 371px 53px;
+    background-size: 660px 545px, 195px 346px;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 208px;
+    transform: translateX(calc(-50% + 70px));
+    width: 1050px;
+    height: 645px;
+    background:
+      url("../img/hand-with-phone-desktop.png"),
+      url("../img/screen-desktop.jpg") 570px 65px;
+    background-size: 1050px 645px, 230px 408px;
+    background-repeat: no-repeat;
+  }
 }
 
 .intro__slogan {
@@ -9,6 +72,30 @@
   line-height: 29px;
   font-weight: 300;
   color: $white;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 315px;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+    margin-bottom: 35px;
+  }
+}
+
+.intro__slogan-break {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .intro__caption {
@@ -16,4 +103,6 @@
   line-height: 32px;
   font-weight: 300;
   color: $white;
+  text-align: center;
+  margin: 0;
 }

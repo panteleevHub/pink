@@ -6,13 +6,17 @@
 
 // Blocks
 
+@import "blocks/button.scss";
+@import "blocks/wrapper.scss";
 @import "blocks/page-body.scss";
 @import "blocks/main-nav.scss";
+@import "blocks/logo-header.scss";
 @import "blocks/intro.scss";
 @import "blocks/download.scss";
 @import "blocks/features.scss";
 @import "blocks/research.scss";
 @import "blocks/reviews.scss";
+@import "blocks/slider-buttons.scss";
 @import "blocks/price.scss";
 @import "blocks/price-table.scss";
 @import "blocks/contacts.scss";
@@ -21,6 +25,9 @@
 @import "blocks/photo-card.scss";
 @import "blocks/photo-filter.scss";
 @import "blocks/feedback.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/logo-footer.scss";
+@import "blocks/socials.scss";
 @import "blocks/copyright.scss";
 @import "blocks/failure-popup.scss";
 @import "blocks/success-popup.scss";

@@ -1,3 +1,33 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 130px;
+
+  @media (min-width: $tablet-width) {
+    width: 144px;
+    padding-left: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 153px;
+    padding-left: 0;
+  }
+}
+
 .copyright__caption {
   line-height: 18px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.copyright__link:hover path,
+.copyright__link:focus path {
+  fill: $dark-blue;
+}
+
+.copyright__link:active path {
+  opacity: 0.3;
 }
