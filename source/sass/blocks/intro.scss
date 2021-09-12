@@ -26,6 +26,18 @@
   min-height: 237px;
   padding-top: 96px;
   padding-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 439px;
+    padding-top: 175px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 394px;
+    padding-top: 170px;
+    padding-bottom: 88px;
+  }
 }
 
 .intro--main::before {
@@ -105,4 +117,17 @@
   color: $white;
   text-align: center;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
+}
+
+.intro__caption-break {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }

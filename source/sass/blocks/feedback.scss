@@ -1,50 +1,171 @@
 .feedback {
   padding-top: 44px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    row-gap: 58px;
+    width: 660px;
+    padding: 0 20px;
+    padding-top: 91px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 57px 70px;
+    width: 1020px;
+    padding: 0 40px;
+    padding-top: 91px;
+  }
 }
 
 .feedback__promo-text {
   line-height: 30px;
   text-align: center;
   padding: 0 20px;
-  margin: 0;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 490px;
+    font-size: 18px;
+    padding: 0;
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 760px;
+    grid-column: 1 / -1;
+  }
+}
+
+.feedback__promo-text span {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
+}
+
+.feedback__background {
+  background-color: $very-light-gray;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+  }
+}
+
+.feedback__background--achievements {
+  @media (min-width: $tablet-width) {
+    grid-row: 5 / 6;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+  }
+}
+
+.feedback__background--apps {
+  @media (min-width: $tablet-width) {
+    grid-row: 3 / 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+  }
 }
 
 .feedback__fieldset {
-  margin: 0;
-  padding: 0;
+  width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
   border: none;
-}
 
-.feedback__fieldset--name,
-.feedback__fieldset--contacts {
-  padding-bottom: 42px;
+  @media (min-width: $tablet-width) {
+    width: 620px;
+    padding: 0;
+    border: 2px solid $light-gray;
+    border-radius: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .feedback__fieldset--name {
   padding-top: 35px;
+  padding-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 14px;
+  }
 }
 
 .feedback__fieldset--contacts {
   padding-top: 32px;
-}
+  padding-bottom: 42px;
 
-.feedback__fieldset--achievements,
-.feedback__fieldset--apps {
-  padding-top: 39px;
-  background-color: $very-light-gray;
+  @media (min-width: $tablet-width) {
+    padding: 0 58px;
+    padding-top: 36px;
+    padding-bottom: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    padding-top: 34px;
+    padding-bottom: 13px;
+  }
 }
 
 .feedback__fieldset--achievements {
+  padding-top: 40px;
   padding-bottom: 44px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 46px;
+    padding-bottom: 57px;
+  }
 }
 
 .feedback__fieldset--apps {
+  padding-top: 36px;
   padding-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
 }
 
 .feedback__fieldset--comment {
-  padding-top: 38px;
+  padding-top: 16px;
   padding-bottom: 48px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 58px;
+    padding-top: 37px;
+    padding-bottom: 51px;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    padding-top: 34px;
+    padding-bottom: 43px;
+  }
 }
 
 .feedback__fieldset-title {
@@ -54,18 +175,47 @@
   text-transform: uppercase;
   color: $dark-pink;
   padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 550px;
+  }
 }
 
-.feedback__fieldset-title--achievements {
-  margin-bottom: 40px;
+.feedback__fieldset-title--name {
+  display: none;
 }
 
 .feedback__fieldset-title--apps {
-  margin-bottom: 36px;
+  padding-top: 39px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 25px;
+  }
+}
+
+.feedback__fieldset-title--achievements {
+  padding-top: 39px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 31px;
+  }
+}
+
+.feedback__fieldset-title--contacts {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding: 0 31px;
+  }
 }
 
 .feedback__fieldset-title--comment {
-  margin-bottom: 16px;
+  padding-top: 38px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 38px;
+  }
 }
 
 .feedback__initials-list {
@@ -78,6 +228,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 71px;
+  }
 }
 
 .feedback__initials-item,
@@ -90,6 +246,31 @@
   margin-bottom: 0;
 }
 
+.feedback__initials-item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 53px;
+  }
+}
+
+.feedback__contacts-item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 10px;
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
 .feedback__initials-label,
 .feedback__contacts-label {
   display: block;
@@ -99,6 +280,25 @@
   cursor: pointer;
   padding-left: 23px;
   margin-bottom: 5px;
+}
+
+.feedback__initials-label {
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 19px;
+    margin-bottom: 0;
+  }
+}
+
+.feedback__contacts-label {
+  @media (min-width: $tablet-width) {
+    padding-left: 18px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 19px;
+  }
 }
 
 .feedback__initials-input,
@@ -117,6 +317,16 @@
   }
 }
 
+.feedback__contacts-input {
+  @media (min-width: $tablet-width) {
+    width: 440px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 314px;
+  }
+}
+
 .feedback__achievements-list,
 .feedback__apps-list {
   margin: 0;
@@ -124,12 +334,62 @@
   list-style: none;
 }
 
+.feedback__achievements-list {
+  @media (min-width: $tablet-width) {
+    padding: 0 60px;
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 47px 57px;
+    }
+  }
+}
+
+.feedback__apps-list {
+  @media (min-width: $tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 74px;
+  }
+}
+
 .feedback__achievements-item {
   margin-bottom: 47px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.feedback__achievements-item--chuck {
+  order: 1;
+}
+
+.feedback__achievements-item--tower {
+  order: 2;
+}
+
+.feedback__achievements-item--beach {
+  order: 3;
+}
+
+.feedback__achievements-item--souvenirs {
+  order: 4;
+}
+
+.feedback__achievements-item--hotel {
+  order: 5;
 }
 
 .feedback__apps-item {
   margin-bottom: 38px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 39px;
+  }
 }
 
 .feedback__achievements-item:last-child,
@@ -149,11 +409,19 @@
 .feedback__achievements-label {
   min-height: 35px;
   padding-left: 59px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 57px;
+  }
 }
 
 .feedback__apps-label {
   min-height: 37px;
   padding-left: 70px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 59px;
+  }
 }
 
 .feedback__comment {
@@ -163,7 +431,7 @@
   font-size: 18px;
   line-height: 30px;
   color: $dark-blue;
-  padding: 13px 20px;
+  padding: 14px 20px;
   border: 2px solid $light-gray;
   border-radius: 3px;
   resize: none;
@@ -171,21 +439,66 @@
   &::placeholder {
     color: inherit;
   }
+
+  @media (min-width: $tablet-width) {
+    height: 193px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 128px;
+  }
+}
+
+.feedback__button-container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
 }
 
 .feedback__submit {
   width: 280px;
   margin: 0 auto;
   margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    margin: 0;
+  }
 }
 
 .feedback__footnote {
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
   margin-bottom: 16px;
 
-  span {
-    color: $dark-pink;
+  @media (min-width: $tablet-width) {
+    max-width: 250px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 400px;
+  }
+}
+
+.feedback__footnote-asterisk {
+  color: $dark-pink;
+}
+
+.feedback__footnote-phrase {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
   }
 }
