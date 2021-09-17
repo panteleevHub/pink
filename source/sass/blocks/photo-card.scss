@@ -2,6 +2,95 @@
   margin: 0;
 }
 
+.photo-card--panorama {
+  position: relative;
+  width: 320px;
+  padding: 0 20px;
+  padding-top: 137px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 660px;
+    padding-top: 509px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    padding: 0 130px;
+    padding-top: 506px;
+  }
+}
+
+.photo-card img {
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+.photo-card--panorama img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 660px;
+    height: 509px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    height: 506px;
+  }
+}
+
+.photo-card--melon .photo-card__description,
+.photo-card--legs .photo-card__description,
+.photo-card--plane .photo-card__description {
+  margin-bottom: 12px;
+}
+
+.photo-card__caption {
+  background-color: $very-light-gray;
+  padding: 18px 0;
+  padding-left: 17px;
+  padding-right: 10px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    min-height: 155px;
+    padding: 23px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 24px 31px 22px 27px;
+  }
+}
+
+.photo-card__caption--panorama {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 121px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 96px;
+    padding-bottom: 23px;
+  }
+}
+
+.photo-card__author {
+  margin: 0;
+}
+
 .photo-card__name {
   font-weight: 700;
 }
@@ -9,9 +98,70 @@
 .photo-card__time {
   font-size: 12px;
   font-weight: 300;
+  text-transform: uppercase;
+}
+
+.photo-card__description {
+  margin: 0;
+  margin-bottom: 11px;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    margin-bottom: 10px;
+  }
+}
+
+.photo-card__description--panorama {
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+}
+
+.photo-card__description-break {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.photo-card__likes {
+  display: flex;
+  align-items: center;
+  column-gap: 19px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+  }
+}
+
+.photo-card__likes--panorama {
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+    column-gap: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: start;
+  }
+}
+
+.photo-card__like {
+  display: block;
+  width: 13px;
+  height: 12px;
+  background-color: transparent;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
 }
 
 .photo-card__counter {
   font-size: 12px;
+  text-transform: uppercase;
   color: $dark-pink;
+  margin: 0;
 }

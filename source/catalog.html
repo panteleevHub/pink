@@ -77,156 +77,191 @@
       <section class="gallery">
         <h2 class="visually-hidden">Фотогалерея</h2>
         <p class="gallery__promo-text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-        <ul class="gallery__list">
-          <li class="gallery__item">
-            <figure class="photo-card">
+        <div class="gallery__panorama">
+          <figure class="photo-card photo-card--panorama">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/panorama-desktop.jpg 1x">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet.jpg 1x">
               <img src="img/panorama-mobile.jpg" width="320" height="137" alt="Подвесной мост">
-              <figcaption class="photo-card__caption">
-                <p class="photo-card__author">
-                  <span class="photo-card__name">Анна</span>
-                  <span class="photo-card__time">(5 минут назад)</span>
-                </p>
-                <p class="photo-card__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-                <div class="photo-card__likes">
-                  <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
-                  <p class="photo-card__counter">Нравится: 215</p>
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="gallery__item">
-            <figure class="photo-card">
-              <img src="img/white-car-mobile.jpg" width="280" height="180" alt="Белый седан">
-              <figcaption class="photo-card__caption">
-                <p class="photo-card__author">
-                  <span class="photo-card__name">Левон</span>
-                  <span class="photo-card__time">(5 часов назад)</span>
-                </p>
-                <p class="photo-card__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                <div class="photo-card__likes">
-                  <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
-                  <p class="photo-card__counter">Нравится: 356</p>
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="gallery__item">
-            <figure class="photo-card">
-              <img src="img/drum-set-mobile.jpg" width="280" height="180" alt="Ударная установка">
-              <figcaption class="photo-card__caption">
-                <p class="photo-card__author">
-                  <span class="photo-card__name">Антон</span>
-                  <span class="photo-card__time">(12 часов назад)</span>
-                </p>
-                <p class="photo-card__description">Соседи будут рады!</p>
-                <div class="photo-card__likes">
-                  <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
-                  <p class="photo-card__counter">Нравится: 666</p>
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="gallery__item">
-            <figure class="photo-card">
-              <img src="img/glass-ceiling-mobile.jpg" width="280" height="180" alt="Стеклянный потолок">
-              <figcaption class="photo-card__caption">
-                <p class="photo-card__author">
-                  <span class="photo-card__name">Борис</span>
-                  <span class="photo-card__time">(20 часов назад)</span>
-                </p>
-                <p class="photo-card__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
-                <div class="photo-card__likes">
-                  <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
-                  <p class="photo-card__counter">Нравится: 215</p>
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="gallery__item">
-            <figure class="photo-card">
-              <img src="img/melon-field-mobile.jpg" width="280" height="180" alt="Кубанская бахча">
-              <figcaption class="photo-card__caption">
-                <p class="photo-card__author">
-                  <span class="photo-card__name">Сергей</span>
-                  <span class="photo-card__time">(25 часов назад)</span>
-                </p>
-                <p class="photo-card__description">Самая кубанская в мире!</p>
-                <div class="photo-card__likes">
-                  <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
-                  <p class="photo-card__counter">Нравится: 4</p>
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="gallery__item">
-            <figure class="photo-card">
-              <img src="img/legs-mobile.jpg" width="280" height="180" alt="Горный склон">
-              <figcaption class="photo-card__caption">
-                <p class="photo-card__author">
-                  <span class="photo-card__name">Максим</span>
-                  <span class="photo-card__time">(40 часов назад)</span>
-                </p>
-                <p class="photo-card__description">Где снег-то?</p>
-                <div class="photo-card__likes">
-                  <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
-                  <p class="photo-card__counter">Нравится: 150</p>
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="gallery__item">
-            <figure class="photo-card">
-              <img src="img/plane-mobile.jpg" width="280" height="180" alt="Крыло самолета">
-              <figcaption class="photo-card__caption">
-                <p class="photo-card__author">
-                  <span class="photo-card__name">Надежда</span>
-                  <span class="photo-card__time">(45 часов назад)</span>
-                </p>
-                <p class="photo-card__description">Всем GM и взаимные лайки!</p>
-                <div class="photo-card__likes">
-                  <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
-                  <p class="photo-card__counter">Нравится: 2560</p>
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
+            </picture>
+            <figcaption class="photo-card__caption photo-card__caption--panorama">
+              <p class="photo-card__author">
+                <span class="photo-card__name">Анна</span>
+                <span class="photo-card__time">(5 минут назад)</span>
+              </p>
+              <p class="photo-card__description photo-card__description--panorama">Прыгать или нет? Напишите в комментарии свой совет и<br class="photo-card__description-break"> смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <div class="photo-card__likes photo-card__likes--panorama">
+                <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
+                <p class="photo-card__counter">Нравится: 215</p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="wrapper">
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <figure class="photo-card">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/white-car-desktop.jpg 1x">
+                  <source media="(min-width: 660px)" srcset="img/white-car-tablet.jpg 1x">
+                  <img src="img/white-car-mobile.jpg" width="280" height="180" alt="Белый седан">
+                </picture>
+                <figcaption class="photo-card__caption">
+                  <p class="photo-card__author">
+                    <span class="photo-card__name">Левон</span>
+                    <span class="photo-card__time">(5 часов назад)</span>
+                  </p>
+                  <p class="photo-card__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                  <div class="photo-card__likes">
+                    <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
+                    <p class="photo-card__counter">Нравится: 356</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery__item">
+              <figure class="photo-card">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/drum-set-desktop.jpg 1x">
+                  <source media="(min-width: 660px)" srcset="img/drum-set-tablet.jpg 1x">
+                  <img src="img/drum-set-mobile.jpg" width="280" height="180" alt="Ударная установка">
+                </picture>
+                <figcaption class="photo-card__caption">
+                  <p class="photo-card__author">
+                    <span class="photo-card__name">Антон</span>
+                    <span class="photo-card__time">(12 часов назад)</span>
+                  </p>
+                  <p class="photo-card__description">Соседи будут рады!</p>
+                  <div class="photo-card__likes">
+                    <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
+                    <p class="photo-card__counter">Нравится: 666</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery__item">
+              <figure class="photo-card">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/glass-ceiling-desktop.jpg 1x">
+                  <source media="(min-width: 660px)" srcset="img/glass-ceiling-tablet.jpg 1x">
+                  <img src="img/glass-ceiling-mobile.jpg" width="280" height="180" alt="Стеклянный потолок">
+                </picture>
+                <figcaption class="photo-card__caption">
+                  <p class="photo-card__author">
+                    <span class="photo-card__name">Борис</span>
+                    <span class="photo-card__time">(20 часов назад)</span>
+                  </p>
+                  <p class="photo-card__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                  <div class="photo-card__likes">
+                    <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
+                    <p class="photo-card__counter">Нравится: 215</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery__item">
+              <figure class="photo-card photo-card--melon">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/melon-field-desktop.jpg 1x">
+                  <source media="(min-width: 660px)" srcset="img/melon-field-tablet.jpg 1x">
+                  <img src="img/melon-field-mobile.jpg" width="280" height="180" alt="Кубанская бахча">
+                </picture>
+                <figcaption class="photo-card__caption">
+                  <p class="photo-card__author">
+                    <span class="photo-card__name">Сергей</span>
+                    <span class="photo-card__time">(25 часов назад)</span>
+                  </p>
+                  <p class="photo-card__description">Самая кубанская в мире!</p>
+                  <div class="photo-card__likes">
+                    <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
+                    <p class="photo-card__counter">Нравится: 4</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery__item">
+              <figure class="photo-card photo-card--legs">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/legs-desktop.jpg 1x">
+                  <source media="(min-width: 660px)" srcset="img/legs-tablet.jpg 1x">
+                  <img src="img/legs-mobile.jpg" width="280" height="180" alt="Горный склон">
+                </picture>
+                <figcaption class="photo-card__caption">
+                  <p class="photo-card__author">
+                    <span class="photo-card__name">Максим</span>
+                    <span class="photo-card__time">(40 часов назад)</span>
+                  </p>
+                  <p class="photo-card__description">Где снег-то?</p>
+                  <div class="photo-card__likes">
+                    <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
+                    <p class="photo-card__counter">Нравится: 150</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery__item">
+              <figure class="photo-card photo-card--plane">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/plane-desktop.jpg 1x">
+                  <source media="(min-width: 660px)" srcset="img/plane-tablet.jpg 1x">
+                  <img src="img/plane-mobile.jpg" width="280" height="180" alt="Крыло самолета">
+                </picture>
+                <figcaption class="photo-card__caption">
+                  <p class="photo-card__author">
+                    <span class="photo-card__name">Надежда</span>
+                    <span class="photo-card__time">(45 часов назад)</span>
+                  </p>
+                  <p class="photo-card__description">Всем GM и взаимные лайки!</p>
+                  <div class="photo-card__likes">
+                    <button class="photo-card__like" type="button" aria-label="Поставить лайк"></button>
+                    <p class="photo-card__counter">Нравится: 2560</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="upload">
         <h2 class="visually-hidden">Загрузка изображений</h2>
-        <p class="upload__promo-text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        <p class="upload__promo-text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
         <div class="photo-filter">
-          <img src="img/snowy-road-mobile.jpg" width="280" height="374" alt="Снежная дорога">
-          <div class="photo-filter__slider">
-            <div class="photo-filter__slider-buttons">
-              <button class="photo-filter__slider-button" type="button" aria-label="Кадрирование"></button>
-              <button class="photo-filter__slider-button" type="button" aria-label="Заливка"></button>
-              <button class="photo-filter__slider-button" type="button" aria-label="Контраст"></button>
+          <div class="photo-filter__container">
+            <picture class="photo-filter__picture">
+              <source media="(min-width: 660px)" srcset="img/snowy-road-tablet.jpg 1x">
+              <img src="img/snowy-road-mobile.jpg" width="280" height="374" alt="Снежная дорога">
+            </picture>
+            <div class="photo-filter__slider">
+              <div class="photo-filter__slider-buttons">
+                <button class="photo-filter__slider-button photo-filter__slider-button--crop photo-filter__slider-button--active" type="button" aria-label="Кадрирование"></button>
+                <button class="photo-filter__slider-button photo-filter__slider-button--fill" type="button" aria-label="Заливка"></button>
+                <button class="photo-filter__slider-button photo-filter__slider-button--contrast" type="button" aria-label="Контраст"></button>
+              </div>
+              <ul class="photo-filter__slides">
+                <li class="photo-filter__slide photo-filter__slide--crop photo-filter__slide--current">
+                  <div class="photo-filter__scale"></div>
+                  <div class="photo-filter__toggle photo-filter__toggle--crop"></div>
+                </li>
+                <li class="photo-filter__slide photo-filter__slide--fill">
+                  <div class="photo-filter__scale"></div>
+                  <div class="photo-filter__toggle photo-filter__toggle--fill"></div>
+                </li>
+                <li class="photo-filter__slide photo-filter__slide--contrast">
+                  <div class="photo-filter__scale"></div>
+                  <div class="photo-filter__toggle photo-filter__toggle--contrast"></div>
+                </li>
+              </ul>
             </div>
-            <ul class="photo-filter__slides">
-              <li class="photo-filter__slide photo-filter__slide--current">
-                <div class="photo-filter__scale"></div>
-                <div class="photo-filter__toggle"></div>
-              </li>
-              <li class="photo-filter__slide">
-                <div class="photo-filter__scale"></div>
-                <div class="photo-filter__toggle"></div>
-              </li>
-              <li class="photo-filter__slide">
-                <div class="photo-filter__scale"></div>
-                <div class="photo-filter__toggle"></div>
-              </li>
-            </ul>
-          </div>
-          <div class="photo-filter__buttons">
-            <button class="photo-filter__button photo-filter__button--post" type="button">Запостить</button>
-            <button class="photo-filter__button photo-filter__button--cancel" type="button">Отмена</button>
+            <div class="photo-filter__buttons">
+              <button class="photo-filter__button photo-filter__button--post" type="button">Запостить</button>
+              <button class="photo-filter__button photo-filter__button--cancel" type="button">Отмена</button>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-footer__logo logo-footer">
+      <a class="page-footer__logo logo-footer" href="index.html">
         <svg class="logo-footer__svg logo-footer__svg--mobile" width="145" height="40" viewBox="0 0 145 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M71.005 18.5486C71.0049 18.2125 71.1358 17.8898 71.3697 17.6494C71.6037 17.409 71.922 17.2701 72.2568 17.2623H79.39C84.4469 17.2623 87.7751 19.9645 87.7751 24.3918V24.4516C87.7751 29.2977 83.7415 31.8105 78.9727 31.8105H73.5384V38.611C73.5539 38.7874 73.5328 38.9651 73.4762 39.1329C73.4196 39.3006 73.3289 39.4547 73.2097 39.5854C73.0906 39.716 72.9457 39.8204 72.7842 39.8918C72.6227 39.9631 72.4481 40 72.2717 40C72.0952 40 71.9207 39.9631 71.7592 39.8918C71.5977 39.8204 71.4527 39.716 71.3336 39.5854C71.2145 39.4547 71.1237 39.3006 71.0671 39.1329C71.0106 38.9651 70.9894 38.7874 71.005 38.611V18.5486ZM79.0721 29.5171C82.7778 29.5171 85.2119 27.5228 85.2119 24.5314V24.4716C85.2119 21.2608 82.8175 19.5956 79.2509 19.5956H73.588V29.4772L79.0721 29.5171Z" fill="#283645"/>
           <path d="M92.5935 18.389C92.5779 18.2126 92.5991 18.0349 92.6556 17.8671C92.7122 17.6994 92.803 17.5452 92.9221 17.4146C93.0412 17.2839 93.1862 17.1796 93.3477 17.1082C93.5092 17.0369 93.6837 17 93.8602 17C94.0366 17 94.2112 17.0369 94.3727 17.1082C94.5342 17.1796 94.6791 17.2839 94.7982 17.4146C94.9174 17.5452 95.0081 17.6994 95.0647 17.8671C95.1213 18.0349 95.1425 18.2126 95.1269 18.389V38.611C95.1425 38.7874 95.1213 38.9651 95.0647 39.1329C95.0081 39.3006 94.9174 39.4548 94.7982 39.5854C94.6791 39.7161 94.5342 39.8204 94.3727 39.8918C94.2112 39.9631 94.0366 40 93.8602 40C93.6837 40 93.5092 39.9631 93.3477 39.8918C93.1862 39.8204 93.0412 39.7161 92.9221 39.5854C92.803 39.4548 92.7122 39.3006 92.6556 39.1329C92.5991 38.9651 92.5779 38.7874 92.5935 38.611V18.389Z" fill="#283645"/>

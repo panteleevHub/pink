@@ -144,6 +144,7 @@
   box-shadow: inset 0px 1px 0px rgba($white, 0.15);
 
   @media (min-width: $desktop-width) {
+    position: relative;
     line-height: 18px;
     font-weight: 400;
     text-transform: none;
@@ -151,6 +152,19 @@
     padding-bottom: 18px;
     border-bottom: none;
     box-shadow: none;
+  }
+}
+
+.main-nav__item--current a::after {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    width: 65%;
+    height: 2px;
+    background-color: $white;
   }
 }
 
