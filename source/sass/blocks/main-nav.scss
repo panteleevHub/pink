@@ -77,6 +77,7 @@
   border: none;
   background-color: transparent;
   padding: 0;
+  cursor: pointer;
 
   @media (min-width: $desktop-width) {
     display: none;
@@ -101,12 +102,16 @@
   }
 }
 
-.main-nav__button:hover path,
-.main-nav__button:focus path {
+.main-nav__svg {
+  fill: $white;
+}
+
+.main-nav__button:hover .main-nav__svg,
+.main-nav__button:focus .main-nav__svg {
   fill: $dark-pink;
 }
 
-.main-nav__button:active path {
+.main-nav__button:active .main-nav__svg {
   opacity: 0.3;
 }
 

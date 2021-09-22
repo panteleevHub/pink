@@ -90,6 +90,18 @@
   display: block;
   background-color: transparent;
   padding: 0;
+  border: none;
+  cursor: pointer;
+
+  &:hover:not(.photo-filter__slider-button--active) .photo-filter__svg,
+  &:focus:not(.photo-filter__slider-button--active) .photo-filter__svg {
+    opacity: 0.5;
+  }
+}
+
+.photo-filter__svg {
+  fill: $dark-blue;
+  opacity: 0.3;
 }
 
 .photo-filter__slider-button--crop {
@@ -107,6 +119,11 @@
   height: 32px;
 }
 
+.photo-filter__slider-button--active .photo-filter__svg {
+  fill: $dark-pink;
+  opacity: 1;
+}
+
 .photo-filter__slides {
   padding: 0;
   margin: 0;
@@ -117,6 +134,8 @@
   display: none;
   padding: 34px 20px;
   position: relative;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -139,6 +158,45 @@
   display: block;
 }
 
+.photo-filter__slide--crop {
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/icon-crop-tablet.svg");
+    background-size: 22px 22px;
+    background-position-x: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 44px 44px;
+    background-position-x: 0;
+  }
+}
+
+.photo-filter__slide--fill {
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/icon-fill-tablet.svg");
+    background-size: 24px 22px;
+    background-position-x: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 48px 43px;
+    background-position-x: 0;
+  }
+}
+
+.photo-filter__slide--contrast {
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/icon-contrast-tablet.svg");
+    background-size: 16px 16px;
+    background-position-x: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 32px 32px;
+    background-position-x: 6px;
+  }
+}
+
 .photo-filter__scale {
   width: 100%;
   height: 2px;
@@ -150,12 +208,19 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  display: block;
   width: 14px;
   height: 14px;
+  padding: 0;
   background-color: $white;
   border: 2px solid $dark-pink;
   border-radius: 50%;
   cursor: pointer;
+
+  &:active,
+  &:focus {
+    background-color: $dark-pink;
+  }
 }
 
 .photo-filter__toggle--crop {
@@ -243,9 +308,29 @@
 .photo-filter__button--post {
   color: $dark-pink;
   border: 3px solid $dark-pink;
+
+  &:hover,
+  &:focus {
+    background-color: $dark-pink;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }
 
 .photo-filter__button--cancel {
   opacity: 0.1;
   border: 3px solid $dark-blue;
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+    background-color: $dark-blue;
+  }
 }

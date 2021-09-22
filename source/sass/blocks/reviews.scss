@@ -20,6 +20,20 @@
   }
 }
 
+.reviews__slider::before {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 79px;
+    height: 63px;
+    background-image: url("../img/quotes.svg");
+  }
+}
+
+
 .reviews__list {
   margin: 0;
   padding: 0;
@@ -104,6 +118,27 @@
   width: 22px;
   height: 41px;
   background-color: transparent;
+  padding: 0;
+  border: none;
+  opacity: 0.3;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.reviews__arrow-button--left {
+  background-image: url("../img/left-arrow.svg");
+}
+
+.reviews__arrow-button--right {
+  background-image: url("../img/right-arrow.svg");
 }
 
 .reviews__slider-buttons {

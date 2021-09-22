@@ -5,12 +5,16 @@
   cursor: pointer;
 }
 
-.logo-footer:hover path,
-.logo-footer:focus path {
+.logo-footer__svg {
+  fill: $dark-blue;
+}
+
+.logo-footer:hover .logo-footer__svg,
+.logo-footer:focus .logo-footer__svg {
   fill: $dark-pink;
 }
 
-.logo-footer:active path {
+.logo-footer:active .logo-footer__svg {
   opacity: 0.3;
 }
 

@@ -21,6 +21,31 @@
   }
 }
 
+.photo-card__title {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 2;
+  width: 140px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+  background-color: $dark-pink;
+  padding: 6px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    top: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 54px;
+    right: 130px;
+  }
+}
+
 .photo-card img {
   @media (min-width: $tablet-width) {
     width: 300px;
@@ -153,6 +178,9 @@
   height: 12px;
   background-color: transparent;
   padding: 0;
+  cursor: pointer;
+  background-image: url("../img/icon-heart.svg");
+  border: none;
 
   @media (min-width: $tablet-width) {
     order: 1;

@@ -56,8 +56,46 @@
   }
 }
 
-.price-table__cell--head:first-child {
-  border-left: none;
+.price-table__cell--hit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 74px;
+  height: 74px;
+  background-image: url("../img/ribbon-caption.svg"), url("../img/ribbon.svg");
+  background-size: 24px 26px, 74px 74px;
+  background-position: 15px 17px, 0 0;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) and (max-width: 1199px) {
+    width: 58px;
+    height: 58px;
+    background-size: 24px 26px, 58px 58px;
+    background-position: 7px 12px, 0 0;
+  }
+}
+
+.price-table__cell--positive {
+  background-image: url("../img/green-tick.svg");
+  background-position: 228px center;
+  background-size: 31px 21px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    background-position-x: center;
+  }
+}
+
+.price-table__cell--negative {
+  background-image: url("../img/red-cross.svg");
+  background-position: 230px center;
+  background-size: 27px 27px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    background-position-x: center;
+  }
 }
 
 .price-table__head-name {

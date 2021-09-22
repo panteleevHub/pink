@@ -13,12 +13,16 @@
   }
 }
 
-.logo-header:hover path,
-.logo-header:focus path {
+.logo-header__svg {
+  fill: $white;
+}
+
+.logo-header:hover .logo-header__svg,
+.logo-header:focus .logo-header__svg {
   fill: $dark-pink;
 }
 
-.logo-header:active path {
+.logo-header:active .logo-header__svg {
   fill: $white;
   opacity: 0.3;
 }

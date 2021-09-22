@@ -98,6 +98,11 @@
   color: $dark-pink;
   text-decoration: underline;
 
+  &:hover,
+  &:focus {
+    color: $dark-blue;
+  }
+
   @media (min-width: $desktop-width) {
     font-size: 18px;
     line-height: 30px;

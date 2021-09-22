@@ -27,7 +27,7 @@ const styles = () => {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -39,7 +39,7 @@ const normalize = () => {
     csso()
   ]))
   .pipe(rename("normalize.min.css"))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
 }
 
 // HTML
@@ -134,7 +134,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "source"
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -166,9 +166,7 @@ exports.default = gulp.series(
 
 // Build
 
-const build = gulp.series(styles, normalize);
-
-/*const build = gulp.series(
+const build = gulp.series(
   clean,
   copy,
   optimizeImages,
@@ -182,13 +180,11 @@ const build = gulp.series(styles, normalize);
   ),
 );
 
-exports.build = build;*/
+exports.build = build;
 
 // Default
 
-exports.default = gulp.series(styles, normalize, server, watcher);
-
-/*exports.default = gulp.series(
+exports.default = gulp.series(
   clean,
   copy,
   copyImages,
@@ -203,4 +199,4 @@ exports.default = gulp.series(styles, normalize, server, watcher);
   gulp.series(
     server,
     watcher
-  ));*/
+  ));

@@ -1,8 +1,13 @@
 .price {
-  background-image: url("../img/grey-background.svg");
+  background-image: url("../img/grey-background-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 0;
+  background-position: 50% -10px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/grey-background.svg");
+    background-position-y: 0;
+  }
 }
 
 .price__slider {

@@ -1,17 +1,26 @@
 .intro {
   position: relative;
   z-index: 1;
-  background: url("../img/intro-background-mobile.jpg") 50% 0;
+  background-image: url("../img/intro-background-mobile.jpg");
+  background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: 700px 462px;
   background-color: $very-dark-blue;
   padding-top: 90px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro-background-mobile@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) {
     background-image: url("../img/intro-background-tablet.jpg");
     background-size: 1200px 727px;
     padding-top: 202px;
     padding-bottom: 114px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-background-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -19,6 +28,10 @@
     background-size: 2560px 853px;
     padding-top: 210px;
     padding-bottom: 125px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-background-desktop@2x.jpg");
+    }
   }
 }
 
@@ -55,6 +68,10 @@
   background-repeat: no-repeat;
   background-size: 320px 286px, 111px 197px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hand-with-phone-mobile@2x.png"), url("../img/screen-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
     top: 183px;
     width: 660px;
@@ -64,6 +81,10 @@
       url("../img/screen-tablet.jpg") 371px 53px;
     background-size: 660px 545px, 195px 346px;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hand-with-phone-tablet@2x.png"), url("../img/screen-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -76,6 +97,10 @@
       url("../img/screen-desktop.jpg") 570px 65px;
     background-size: 1050px 645px, 230px 408px;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hand-with-phone-desktop@2x.png"), url("../img/screen-desktop@2x.jpg");
+    }
   }
 }
 
@@ -121,13 +146,5 @@
   @media (min-width: $tablet-width) {
     font-size: 50px;
     line-height: 68px;
-  }
-}
-
-.intro__caption-break {
-  display: none;
-
-  @media (min-width: $desktop-width) {
-    display: block;
   }
 }
