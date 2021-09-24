@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pink</title>
+    <link rel="preload" href="fonts/open-sans-300.woff2" as="font">
+    <link rel="preload" href="fonts/open-sans-300.woff" as="font">
+    <link rel="preload" href="fonts/open-sans-400.woff2" as="font">
+    <link rel="preload" href="fonts/open-sans-400.woff" as="font">
+    <link rel="preload" href="fonts/open-sans-700.woff2" as="font">
+    <link rel="preload" href="fonts/open-sans-700.woff" as="font">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="/favicon.ico">
@@ -11,9 +17,9 @@
     <link rel="apple-touch-icon" href="img/180.png">
     <link rel="manifest" href="/manifest.webmanifest">
   </head>
-  <body class="page-body">
+  <body class="page-body no-js">
     <header class="page-header">
-      <nav class="page-header__nav main-nav">
+      <nav class="page-header__nav main-nav main-nav--closed">
         <div class="main-nav__container">
           <div class="main-nav__menu-bar">
             <a class="main-nav__logo logo-header">
@@ -27,7 +33,7 @@
                 <use xlink:href="img/sprite.svg#pink-logo-desktop"></use>
               </svg>
             </a>
-            <button class="main-nav__button main-nav__button--close" type="button" aria-label="Открыть меню / Закрыть меню">
+            <button class="main-nav__button main-nav__button--open" type="button" aria-label="Открыть меню / Закрыть меню">
               <svg class="main-nav__svg main-nav__svg--open" width="50" height="24">
                 <use xlink:href="img/sprite.svg#open-menu-button"></use>
               </svg>
@@ -240,5 +246,6 @@
         </a>
       </p>
     </footer>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

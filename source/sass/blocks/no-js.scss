@@ -1,0 +1,17 @@
+@media (max-width: 1199px) {
+  .no-js {
+    .main-nav__menu-bar {
+      padding: 23px 20px;
+      background-color: $dark-blue;
+      border-bottom: 1px solid $black;
+    }
+
+    .main-nav__button {
+      display: none;
+    }
+
+    .main-nav__list {
+      display: block;
+    }
+  }
+}
