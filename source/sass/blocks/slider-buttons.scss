@@ -4,10 +4,6 @@
   flex-wrap: wrap;
   gap: 10px 19px;
   max-width: 180px;
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
 }
 
 .slider-buttons__item {
@@ -21,11 +17,9 @@
 }
 
 .slider-buttons__item--active {
-  width: 6px;
-  height: 6px;
   background-color: transparent;
   box-shadow: 0 0 0 3px $dark-blue;
-  cursor: auto;
+  cursor: default;
 }
 
 .slider-buttons__item:not(.slider-buttons__item--active):hover,

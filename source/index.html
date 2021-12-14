@@ -4,12 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pink</title>
-    <link rel="preload" href="fonts/open-sans-300.woff2" as="font">
-    <link rel="preload" href="fonts/open-sans-300.woff" as="font">
-    <link rel="preload" href="fonts/open-sans-400.woff2" as="font">
-    <link rel="preload" href="fonts/open-sans-400.woff" as="font">
-    <link rel="preload" href="fonts/open-sans-700.woff2" as="font">
-    <link rel="preload" href="fonts/open-sans-700.woff" as="font">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="/favicon.ico">
@@ -117,7 +111,7 @@
           <h2 class="visually-hidden">Отзывы</h2>
           <div class="reviews__slider">
             <ul class="reviews__list">
-              <li class="reviews__item">
+              <li class="reviews__item reviews__item--first reviews__item--active">
                 <p class="reviews__name">Николай Петров</p>
                 <p class="reviews__status">25 лет, водитель трамвая</p>
                 <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
@@ -128,9 +122,9 @@
               <button class="reviews__arrow-button reviews__arrow-button--right" type="button" aria-label="Вперед"></button>
             </div>
             <div class="reviews__slider-buttons slider-buttons">
-              <button class="reviews__slider-button slider-buttons__item slider-buttons__item--active" type="button" aria-label="Первый слайд"></button>
-              <button class="reviews__slider-button slider-buttons__item" type="button" aria-label="Второй слайд"></button>
-              <button class="reviews__slider-button slider-buttons__item" type="button" aria-label="Третий слайд"></button>
+              <button class="reviews__slider-button slider-buttons__item slider-buttons__item--active" type="button" id="reviews__item--first" aria-label="Первый слайд"></button>
+              <button class="reviews__slider-button slider-buttons__item" type="button" id="reviews__item--second" aria-label="Второй слайд"></button>
+              <button class="reviews__slider-button slider-buttons__item" type="button" id="reviews__item--third" aria-label="Третий слайд"></button>
             </div>
           </div>
         </div>

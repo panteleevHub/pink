@@ -12,6 +12,9 @@
 
 .price__slider {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 117px;
   padding-bottom: 98px;
   overflow: hidden;
@@ -30,8 +33,6 @@
 .price__slider-buttons {
   position: absolute;
   bottom: 49px;
-  left: 50%;
-  transform: translateX(-50%);
 
   @media (min-width: $tablet-width) {
     display: none;

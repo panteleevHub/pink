@@ -1,4 +1,6 @@
 .page-footer {
+  position: sticky;
+  top: 100vh;
   padding: 40px 20px;
 
   @media (min-width: $tablet-width) {

@@ -41,10 +41,12 @@
 }
 
 .reviews__item {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-  }
+  display: none;
+}
+
+.reviews__item--active {
+  display: flex;
+  flex-direction: column;
 }
 
 .reviews__name {
@@ -105,9 +107,8 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 50%;
+    top: 141px;
     left: 0;
-    transform: translateY(-50%);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -149,5 +150,9 @@
 
   @media (min-width: $tablet-width) {
     bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
