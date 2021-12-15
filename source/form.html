@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="img/180.png">
     <link rel="manifest" href="/manifest.webmanifest">
   </head>
-  <body class="page-body no-js">
+  <body class="page-body page-body--form no-js">
     <header class="page-header">
       <nav class="page-header__nav main-nav main-nav--closed">
         <div class="main-nav__container">
@@ -61,23 +61,23 @@
     </header>
     <main>
       <h1 class="visually-hidden">Страница с формой</h1>
-      <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
+      <form class="feedback" method="post" action="https://echo.htmlacademy.ru" target="_blank">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <p class="feedback__promo-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span> Пожалуйста, заполните форму ниже:</span></p>
         <fieldset class="feedback__fieldset feedback__fieldset--name">
           <legend class="feedback__fieldset-title feedback__fieldset-title--name">Представьтесь:</legend>
           <ul class="feedback__initials-list">
             <li class="feedback__initials-item">
-              <label class="feedback__initials-label" for="feedback-name">Фамилия:</label>
-              <input class="feedback__initials-input" type="text" name="name" id="feedback-name" placeholder="Укажите фамилию *" required>
+              <label class="feedback__initials-label" for="feedback-surname">Фамилия:</label>
+              <input class="feedback__initials-input feedback__initials-input--surname" type="text" name="surname" id="feedback-surname" placeholder="Укажите фамилию *">
             </li>
             <li class="feedback__initials-item">
-              <label class="feedback__initials-label" for="feedback-surname">Имя:</label>
-              <input class="feedback__initials-input" type="text" name="surname" id="feedback-surname" placeholder="Введите ваше имя *" required>
+              <label class="feedback__initials-label" for="feedback-name">Имя:</label>
+              <input class="feedback__initials-input feedback__initials-input--name" type="text" name="name" id="feedback-name" placeholder="Введите ваше имя *">
             </li>
             <li class="feedback__initials-item">
               <label class="feedback__initials-label" for="feedback-patronymic">Отчество:</label>
-              <input class="feedback__initials-input" type="text" name="patronymic" id="feedback-patronymic" placeholder="Ну и отчество тоже">
+              <input class="feedback__initials-input feedback__initials-input--patronymic" type="text" name="patronymic" id="feedback-patronymic" placeholder="Ну и отчество тоже">
             </li>
           </ul>
         </fieldset>
@@ -121,7 +121,7 @@
             </li>
             <li class="feedback__contacts-item feedback__contacts-item--email">
               <label class="feedback__contacts-label" for="feedback-email">Адрес почты</label>
-              <input class="feedback__contacts-input" type="email" name="email" id="feedback-email" placeholder="Введите почту *" required>
+              <input class="feedback__contacts-input feedback__contacts-input--email" type="email" name="email" id="feedback-email" placeholder="Введите почту *">
             </li>
           </ul>
         </fieldset>
