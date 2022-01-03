@@ -61,7 +61,7 @@
     </header>
     <main>
       <h1 class="visually-hidden">Страница с формой</h1>
-      <form class="feedback" method="post" action="https://echo.htmlacademy.ru" target="_blank">
+      <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <p class="feedback__promo-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span> Пожалуйста, заполните форму ниже:</span></p>
         <fieldset class="feedback__fieldset feedback__fieldset--name">
@@ -69,11 +69,11 @@
           <ul class="feedback__initials-list">
             <li class="feedback__initials-item">
               <label class="feedback__initials-label" for="feedback-surname">Фамилия:</label>
-              <input class="feedback__initials-input feedback__initials-input--surname" type="text" name="surname" id="feedback-surname" placeholder="Укажите фамилию *">
+              <input class="feedback__initials-input feedback__initials-input--surname feedback__input-required" type="text" name="surname" id="feedback-surname" placeholder="Укажите фамилию *">
             </li>
             <li class="feedback__initials-item">
               <label class="feedback__initials-label" for="feedback-name">Имя:</label>
-              <input class="feedback__initials-input feedback__initials-input--name" type="text" name="name" id="feedback-name" placeholder="Введите ваше имя *">
+              <input class="feedback__initials-input feedback__initials-input--name feedback__input-required" type="text" name="name" id="feedback-name" placeholder="Введите ваше имя *">
             </li>
             <li class="feedback__initials-item">
               <label class="feedback__initials-label" for="feedback-patronymic">Отчество:</label>
@@ -121,7 +121,7 @@
             </li>
             <li class="feedback__contacts-item feedback__contacts-item--email">
               <label class="feedback__contacts-label" for="feedback-email">Адрес почты</label>
-              <input class="feedback__contacts-input feedback__contacts-input--email" type="email" name="email" id="feedback-email" placeholder="Введите почту *">
+              <input class="feedback__contacts-input feedback__contacts-input--email feedback__input-required" type="email" name="email" id="feedback-email" placeholder="Введите почту *">
             </li>
           </ul>
         </fieldset>

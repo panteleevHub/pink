@@ -516,6 +516,10 @@
   border-color: $dark-pink;
 }
 
+.feedback__input-error {
+  border-color: $red;
+}
+
 .feedback__comment {
   display: block;
   width: 100%;

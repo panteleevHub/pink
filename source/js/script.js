@@ -24,6 +24,7 @@ if (body.classList.contains('page-body--main')) {
 
   const sliderPrice = document.querySelector('.price__slider');
   const sliderPriceTable = sliderPrice.querySelector('.price-table');
+  const sliderPriceButtonsList = sliderPrice.querySelector('.price__slider-buttons');
   const sliderPriceButtons = sliderPrice.querySelectorAll('.price__slider-button');
 
   const removeActiveClass = (() => {
@@ -32,22 +33,22 @@ if (body.classList.contains('page-body--main')) {
     }
   });
 
-  sliderPriceButtons[0].addEventListener('click', () => {
-    sliderPriceTable.style.transform='translateX(280px)';
-    removeActiveClass();
-    sliderPriceButtons[0].classList.add('slider-buttons__item--active');
-  });
-
-  sliderPriceButtons[1].addEventListener('click', () => {
-    sliderPriceTable.style.transform='translateX(0)';
-    removeActiveClass();
-    sliderPriceButtons[1].classList.add('slider-buttons__item--active');
-  });
-
-  sliderPriceButtons[2].addEventListener('click', () => {
-    sliderPriceTable.style.transform='translateX(-280px)';
-    removeActiveClass();
-    sliderPriceButtons[2].classList.add('slider-buttons__item--active');
+  sliderPriceButtonsList.addEventListener('click', (evt) => {
+    if (evt.target.closest('.price__slider-button--first')) {
+      sliderPriceTable.style.transform='translateX(280px)';
+      removeActiveClass();
+      sliderPriceButtons[0].classList.add('slider-buttons__item--active');
+    }
+    if (evt.target.closest('.price__slider-button--second')) {
+      sliderPriceTable.style.transform='translateX(0)';
+      removeActiveClass();
+      sliderPriceButtons[1].classList.add('slider-buttons__item--active');
+    }
+    if (evt.target.closest('.price__slider-button--third')) {
+      sliderPriceTable.style.transform='translateX(-280px)';
+      removeActiveClass();
+      sliderPriceButtons[2].classList.add('slider-buttons__item--active');
+    }
   });
 
   const checkMediaQuery = (() => {
@@ -131,29 +132,42 @@ if (body.classList.contains('page-body--form')) {
   const userSurname = feedbackForm.querySelector('.feedback__initials-input--surname');
   const userEmail = feedbackForm.querySelector('.feedback__contacts-input--email');
   const successPopup = document.querySelector('.success-popup');
-  const successPopupClose = successPopup.querySelector('.success-popup__close');
   const failurePopup = document.querySelector('.failure-popup');
-  const failurePopupClose = failurePopup.querySelector('.failure-popup__close');
 
   feedbackForm.addEventListener('submit', (evt) => {
     if (!userName.value || !userSurname.value || !userEmail.value) {
       evt.preventDefault();
       failurePopup.classList.add('popup--show');
+      addError();
     } else {
       successPopup.classList.add('popup--show');
     }
   });
 
-  successPopupClose.addEventListener('click', () => {
-    successPopup.classList.remove('popup--show');
-  });
+  function addError() {
+    const requiredInputs = feedbackForm.querySelectorAll('.feedback__input-required');
+    for (requiredInput of requiredInputs) {
+      if (!requiredInput.value) {
+        requiredInput.classList.add('feedback__input-error');
+      }
+    }
+  }
 
-  failurePopupClose.addEventListener('click', () => {
-    failurePopup.classList.remove('popup--show');
+  document.addEventListener('click', (evt) => {
+    if (evt.target.closest('.success-popup__close')) {
+      successPopup.classList.remove('popup--show');
+    }
+    if (evt.target.closest('.failure-popup__close')) {
+      failurePopup.classList.remove('popup--show');
+    }
+    if (!evt.target.closest('.popup')) {
+      successPopup.classList.remove('popup--show');
+      failurePopup.classList.remove('popup--show');
+    }
   });
 
   window.addEventListener('keydown', (evt) => {
-    if (evt.key === 'Escape') {
+    if (evt.code === 'Escape') {
       successPopup.classList.remove('popup--show');
       failurePopup.classList.remove('popup--show');
     }
