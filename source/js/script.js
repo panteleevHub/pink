@@ -22,43 +22,37 @@ if (body.classList.contains('page-body--main')) {
 
   /* Slider price */
 
+  const TABLET_SIZE = 659;
+  const TABLE_COLUMN_SIZE = 280;
+  const INITIAL_SHIFT = 0;
+
   const sliderPrice = document.querySelector('.price__slider');
   const sliderPriceTable = sliderPrice.querySelector('.price-table');
   const sliderPriceButtonsList = sliderPrice.querySelector('.price__slider-buttons');
   const sliderPriceButtons = sliderPrice.querySelectorAll('.price__slider-button');
 
-  const removeActiveClass = (() => {
-    for (let i = 0; i < sliderPriceButtons.length; i++) {
-      sliderPriceButtons[i].classList.remove('slider-buttons__item--active');
-    }
-  });
+  const removeActiveClass = () => {
+    const sliderPriceButtonActive = sliderPriceButtonsList.querySelector('.slider-buttons__item--active');
+    sliderPriceButtonActive.classList.remove('slider-buttons__item--active');
+  };
 
   sliderPriceButtonsList.addEventListener('click', (evt) => {
-    if (evt.target.closest('.price__slider-button--first')) {
-      sliderPriceTable.style.transform='translateX(280px)';
+    if (evt.target.tagName === 'BUTTON') {
+      const id = parseInt(evt.target.id);
+
       removeActiveClass();
-      sliderPriceButtons[0].classList.add('slider-buttons__item--active');
-    }
-    if (evt.target.closest('.price__slider-button--second')) {
-      sliderPriceTable.style.transform='translateX(0)';
-      removeActiveClass();
-      sliderPriceButtons[1].classList.add('slider-buttons__item--active');
-    }
-    if (evt.target.closest('.price__slider-button--third')) {
-      sliderPriceTable.style.transform='translateX(-280px)';
-      removeActiveClass();
-      sliderPriceButtons[2].classList.add('slider-buttons__item--active');
+      sliderPriceButtons[id].classList.add('slider-buttons__item--active');
+      sliderPriceTable.style.transform=`translateX(${TABLE_COLUMN_SIZE - TABLE_COLUMN_SIZE * id}px)`;
     }
   });
 
-  const checkMediaQuery = (() => {
-    if (window.innerWidth > 659) {
-      sliderPriceTable.style.transform='translateX(0)';
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > TABLET_SIZE) {
+      sliderPriceTable.style.transform=`translateX(${INITIAL_SHIFT})`;
       removeActiveClass();
       sliderPriceButtons[1].classList.add('slider-buttons__item--active');
     }
   });
-  window.addEventListener('resize', checkMediaQuery);
 
   /* Slider reviews*/
 
@@ -70,7 +64,7 @@ if (body.classList.contains('page-body--main')) {
 
   let activeSlideIndex = 0;
 
-  const sliderReviewsArrowNextClickHandler = (() => {
+  const sliderReviewsArrowNextClickHandler = () => {
     activeSlideIndex++;
     if (activeSlideIndex >= sliderReviewsItems.length) {
       sliderReviewsItems[activeSlideIndex - 1].classList.remove('reviews__item--active');
@@ -80,10 +74,11 @@ if (body.classList.contains('page-body--main')) {
       sliderReviewsItems[activeSlideIndex - 1].classList.remove('reviews__item--active');
       sliderReviewsItems[activeSlideIndex].classList.add('reviews__item--active');
     }
-  });
+  };
+
   sliderReviewsArrowNext.addEventListener('click', sliderReviewsArrowNextClickHandler);
 
-  const sliderReviewsArrowPrevClickHandler = (() => {
+  const sliderReviewsArrowPrevClickHandler = () => {
     activeSlideIndex--;
     if (activeSlideIndex < 0) {
       sliderReviewsItems[activeSlideIndex + 1].classList.remove('reviews__item--active');
@@ -93,10 +88,11 @@ if (body.classList.contains('page-body--main')) {
       sliderReviewsItems[activeSlideIndex + 1].classList.remove('reviews__item--active');
       sliderReviewsItems[activeSlideIndex].classList.add('reviews__item--active');
     }
-  });
+  };
+
   sliderReviewsArrowPrev.addEventListener('click', sliderReviewsArrowPrevClickHandler);
 
-  const sliderReviewsButtonClickHandler = ((evt) => {
+  const sliderReviewsButtonClickHandler = (evt) => {
     evt.preventDefault();
     const {target} = evt;
     if (target.tagName !== 'BUTTON') {
@@ -119,7 +115,8 @@ if (body.classList.contains('page-body--main')) {
         target.blur();
       }
     });
-  });
+  };
+
   sliderReviewsButtons.addEventListener('click', sliderReviewsButtonClickHandler);*/
 }
 
@@ -144,14 +141,14 @@ if (body.classList.contains('page-body--form')) {
     }
   });
 
-  function addError() {
+  const addError = () => {
     const requiredInputs = feedbackForm.querySelectorAll('.feedback__input-required');
-    for (requiredInput of requiredInputs) {
+    for (const requiredInput of requiredInputs) {
       if (!requiredInput.value) {
         requiredInput.classList.add('feedback__input-error');
       }
     }
-  }
+  };
 
   document.addEventListener('click', (evt) => {
     if (evt.target.closest('.success-popup__close')) {
